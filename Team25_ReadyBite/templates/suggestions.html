@@ -1,0 +1,55 @@
+<ion-view title="suggestions" id="page11">
+  <ion-content padding="true" class="has-header">
+    <form id="suggestions-form7" class="list">
+      <label class="item item-select" id="suggestions-select1">
+        <span class="input-label">Location</span>
+        <select>
+          <option></option>
+          <option>get your current location</option>
+        </select>
+      </label>
+      <label class="item item-input" id="suggestions-search1">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="search">
+      </label>
+    </form>
+    <div id="suggestions-button-bar3" class="button-bar">
+      <button id="suggestions-button21" ng-class="{'active':activeSection ==1}" ng-click="changeSection(1)" class="button button-royal button-small button-block button-outline time">Time</button>
+      <button id="suggestions-button22" ng-class="{'active':activeSection ==2}" ng-click="changeSection(2)" class="button button-royal button-small button-block button-outline">Healthy</button>
+      <button id="suggestions-button23" ng-class="{'active':activeSection ==3}" ng-click="changeSection(3)" class="button button-royal button-small button-block button-outline">Taste</button>
+      <button id="suggestions-button24" ng-class="{'active':activeSection ==4}" ng-click="changeSection(4)" class="button button-royal button-small button-block button-outline">Price</button>
+    </div>
+    <ion-list id="suggestions-list18" ng-show="activeSection==4">
+      <ion-item id="suggestions-list-item50">$5</ion-item>
+      <ion-item id="suggestions-list-item51">Item 2</ion-item>
+      <ion-item id="suggestions-list-item52">Item 3</ion-item>
+    </ion-list>
+    <ion-list id="suggestions-list17" ng-show="activeSection==3">
+      <ion-item id="suggestions-list-item47">sweet</ion-item>
+      <ion-item id="suggestions-list-item48">salt</ion-item>
+      <ion-item id="suggestions-list-item49">Item 3</ion-item>
+    </ion-list>
+    <ion-list id="suggestions-list16" ng-show="activeSection==2">
+      <ion-item id="suggestions-list-item44">healthy</ion-item>
+      <ion-item id="suggestions-list-item45">Item 2</ion-item>
+      <ion-item id="suggestions-list-item46">Item 3</ion-item>
+    </ion-list>
+    <ion-list id="suggestions-list9" ng-show="activeSection==1">
+      <ion-item class="item-thumbnail-left" id="suggestions-list-item7" ui-sref="tabsController.onePlace()">
+        <img src="img/NkQPV7jvTkOVjYX8cJDP_tuna.jpg">
+        <h2>Tuna Salad</h2>
+        <p style="white-space:normal;">The Cafe Shop 🥗| -less than 3 min 🕐| - $6 | health</p>
+      </ion-item>
+      <ion-item class="item-thumbnail-left" id="suggestions-list-item8" ui-sref="tabsController.onePlace()">
+        <img src="img/N7jxMR9RIWm1e4a8CXBQ_coco.jpg">
+        <h2>Hot Coco</h2>
+        <p style="white-space:normal;">The Cafe Shop 🥗| -less than 3 min 🕐| - $6 </p>
+      </ion-item>
+      <ion-item class="item-thumbnail-left" id="suggestions-list-item9" ui-sref="tabsController.onePlace()">
+        <img src="img/ADOg7SDwT1eyynSFfgW6_fish.jpg">
+        <h2>Fried Fish</h2>
+        <p style="white-space:normal;">The Cafe Shop 🥗| -less than 3 min 🕐| - $6 </p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
