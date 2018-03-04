@@ -1,0 +1,46 @@
+<ion-view title="OnePlace" id="page6">
+  <ion-content padding="true" class="has-header">
+    <ion-slides disable-side-menu-drag="" options="{'loop': true}" slider="slider5" delegate-handle="slider5" id="onePlace-slider5" style="width:100%;height:200px;">
+      <ion-slide-page id="onePlace-slide222" style="background:url(&quot;img/h2jsdUpySvyTaqwq4LPV_image.png&quot;) no-repeat center;background-size:cover;"></ion-slide-page>
+      <ion-slide-page id="onePlace-slide223" style="background:url(&quot;img/kHGOi7UPRmO6z9JyQU7j_piazza1.jpeg&quot;) no-repeat center;background-size:cover;"></ion-slide-page>
+      <ion-slide-page id="onePlace-slide224" style="background:url(&quot;img/WE6rB9dZRTiIWQlP5qsA_kitten3.jpg&quot;) no-repeat center;background-size:cover;"></ion-slide-page>
+    </ion-slides>
+    <form id="onePlace-form10" class="list">
+      <ion-item class="item-icon-left" id="onePlace-list-item11">
+        <i class="icon ion-android-time"></i>Open All Day</ion-item>
+      <ion-item class="item-icon-left" id="onePlace-list-item12" href-inappbrowser="https://www.google.com/maps">
+        <i class="icon ion-android-navigate"></i>You are 5minutes away.
+        <span class="item-note">Get directions</span>
+        <ion-option-button class="button-royal">Show</ion-option-button>
+      </ion-item>
+      <div id="onePlace-button-bar4" class="button-bar"></div>
+      <ion-item class="item-icon-left" id="onePlace-list-item14" ui-sref="tabsController.reviews()">
+        <i class="icon ion-chatboxes"></i>Reviews/Add Review</ion-item>
+      <ion-item class="item-icon-left" id="onePlace-list-item20">
+        <i class="icon ion-android-star-outline"></i>Add to favorites</ion-item>
+      <a ui-sref="tabsController.qRCodeForPayment()" id="onePlace-button29" class="button button-royal button-block">Pay now</a>
+      <ion-item class="item-divider" id="onePlace-list-item-divider3"> </ion-item>
+      <ion-toggle toggle-class="toggle-royal" id="onePlace-toggle2" name="Details" ng-model="showContent">Details</ion-toggle>
+    </form>
+    <ion-list id="onePlace-list12">
+      <ion-item class="item-icon-right dark" id="onePlace-list-item27" ng-show="showContent">Healthy Index
+        <i class="icon ion-happy-outline icon-accessory"></i>
+      </ion-item>
+      <ion-item class="item-icon-right dark" id="onePlace-list-item16" ng-show="showContent">Waiting Time
+        <i class="icon ion-ios-timer-outline icon-accessory"></i>
+      </ion-item>
+      <ion-item class="item-icon-right dark" id="onePlace-list-item19" ng-show="showContent" ng-model="show">Types
+        <i class="icon ion-icecream icon-accessory"></i>
+        <ion-option-button class="button-positive"></ion-option-button>
+      </ion-item>
+      <ion-item class="item-icon-right dark" id="onePlace-list-item28" ng-show="showContent" ng-model="show">Taste
+        <i class="icon ion-android-restaurant icon-accessory"></i>
+        <ion-option-button class="button-positive"></ion-option-button>
+      </ion-item>
+      <ion-item class="item-icon-right dark" id="onePlace-list-item29" ng-show="showContent" ng-model="show">Price
+        <i class="icon ion-card icon-accessory"></i>
+        <ion-option-button class="button-positive"></ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
