@@ -1,0 +1,79 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/xiu/Desktop/ReadyBites_v1/blank/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-v18/values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/wangdi/Documents/18spring/08781/team project/mobileProject/ReadyBites_v1/blank/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "/Users/wangdi/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/61b0846c3c96785c5bb797c3bbc330b6/res/values-v18/values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/xiu/Desktop/mobileProject/mobileProject/ReadyBites_v1/blank/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-v18/values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/xiu/Desktop/08781/mobileProject/ReadyBites_v1/blank/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-v18/values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/xiu/Desktop/blank/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "/Users/xiu/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.4.0.aar/b43174f837b6e7aec719ed37a9d15687/res/values-v18/values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        }
+    ]
+}

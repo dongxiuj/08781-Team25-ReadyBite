@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        SignIn
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col width-67>
+        <img src="assets/imgs/fengmian.jpg"/>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <div>
+        <ion-row>
+          <ion-col>
+            <ion-list inset>
+              
+              <ion-item [(ngModel)]="username" name="username">
+                <ion-input type="text" placeholder="UserName"></ion-input>
+              </ion-item>
+              
+              <ion-item>
+                <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>
+              </ion-item>
+              
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col>
+            <button ion-button ion-button outline color="royal" block (click)="createAccount()">Create New Account</button>
+          </ion-col>
+        </ion-row>
+        
+    </div>
+  </ion-content>

@@ -1,0 +1,194 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <ion-navbar color="ionic">
+      <ion-title>Suggestions</ion-title>
+    </ion-navbar>
+  </ion-navbar>
+    <!-- <ion-item [(ngModel)]="searchType" name="searchType">        
+      <ion-label> <ion-icon name="search"></ion-icon></ion-label>
+      <ion-input clearInput type="text" placeholder="Food Type"></ion-input>
+    </ion-item> -->
+
+    <!--<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+      <ion-list>
+        <ion-item *ngFor="let item of items">
+          {{ item }}
+        </ion-item>
+      </ion-list>-->
+    <ion-searchbar autocorrect="off" autocapitalize="off" spellcheck="off" #searchbar placeholder="Search..." class="search-box"></ion-searchbar>
+
+    <!--<ion-item [(ngModel)]="address" name="address">        
+      <ion-label> <ion-icon name="locate"></ion-icon></ion-label>
+      <ion-input  clearInput type="text" placeholder="Current Location"></ion-input>
+    </ion-item>-->
+
+    
+    <!--<ion-searchbar
+      [(ngModel)]="searchType"
+      name="searchType"
+      [showCancelButton]="shouldShowCancel"
+      (ionInput)="onInput($event)"
+      (ionCancel)="onCancel($event)">
+    </ion-searchbar>-->
+    <!--<ion-select [(ngModel)]="Location" name="Location">
+    <ion-option>
+      Get your location
+    </ion-option>
+    </ion-select>-->
+
+    <ion-row>
+        <!-- <ion-col width-15> 
+          <button value="distance" ion-button outline color="royal" block (click)="onSegmentChanged('distance')">
+            Distance
+          </button>
+        </ion-col> -->
+        <ion-col width-15>
+          <button value="calories" ion-button outline color="royal" block (click)="onSegmentChanged('calories')">
+            Calories
+          </button>
+        </ion-col>
+        <ion-col width-15> 
+            <button value="rate" ion-button outline color="royal" block (click)="onSegmentChanged('rate')">
+            Rate
+            </button>
+          </ion-col>
+          <ion-col width-15>
+            <button value="price" ion-button outline color="royal" block (click)="onSegmentChanged('price')">
+            Price
+            </button>
+          </ion-col>
+      </ion-row>
+    <!--
+    <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="standard" name ="standard" (change)="onSegmentChanged($event)">
+          <ion-segment-button value="distance">
+            Distance
+          </ion-segment-button>
+          <ion-segment-button value="calories">
+            Calories
+          </ion-segment-button>
+          <ion-segment-button value="taste">
+            Taste
+          </ion-segment-button>
+          <ion-segment-button value="price">
+            Price
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
+    -->
+</ion-header>
+
+<ion-content>
+    <!--<ion-card *ngFor="let food of foodArray" (tap)="showDetails(food)">
+      <img [src]='food.image'>
+      <ion-card-content>        
+        <ion-card-title>
+            {{food.type}}          {{food.distance}} mile
+        </ion-card-title>
+        <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>
+      </ion-card-content>
+    </ion-card>  -->
+
+    <ion-list>
+      <ion-item *ngFor="let food of foodArray" (tap)="showDetails(food)" text-wrap detail-none>
+        <ion-grid>
+          <ion-row>
+            <ion-col width-25>
+              <img [src]='food.image'>
+            </ion-col>
+            
+            <ion-col width-3>
+              <h2> {{food.type}} </h2>
+              <p>
+                  <!-- <ion-icon name="star" *ngFor="let star of stars; let i=index" [ngClass]="{'active': isActive(i, food.rate)}"></ion-icon> -->
+                  <!-- <ion-item> -->
+                      <ion-icon *ngIf="food.rate>=1" name="star" item-end small></ion-icon>
+                      <ion-icon *ngIf="food.rate>=2" name="star" item-end small></ion-icon>
+                      <ion-icon *ngIf="food.rate>=3" name="star" item-end small></ion-icon>
+                      <ion-icon *ngIf="food.rate>=4" name="star" item-end small></ion-icon>
+                      <ion-icon *ngIf="food.rate>=5" name="star" item-end small></ion-icon>
+                      <!-- <ion-icon *ngIf="myRating%1!=0" name="star-half"></ion-icon>
+                      <ion-icon *ngIf="myRating==0" name="star-outline"></ion-icon>
+                      <ion-icon *ngIf="myRating<=1" name="star-outline"></ion-icon>
+                      <ion-icon *ngIf="myRating<=2" name="star-outline"></ion-icon>
+                      <ion-icon *ngIf="myRating<=3" name="star-outline"></ion-icon>
+                      <ion-icon *ngIf="myRating<=4" name="star-outline"></ion-icon> -->
+                    <!-- </ion-item> -->
+                    
+                  <!-- {{food.reviewCount}} Reviews -->
+                  <!-- Rate {{food.rate}}  -->
+              </p>
+              <p>{{food.address}}</p>
+              <p>{{food.calories}} kcal</p>
+              <p>You need to wait {{food.waitingTime}}min</p>
+            </ion-col>
+            <ion-col width-20 text-right>
+              <p>{{food.distance}}mi.</p>
+
+              <p> ${{food.price}}</p>
+              <!--<p><ion-icon name="logo-usd" *ngFor="let usd of getArray(food.price)"></ion-icon></p>-->
+            </ion-col>
+          </ion-row>
+        </ion-grid>      
+      </ion-item>
+    </ion-list>
+
+</ion-content>
+
+<!--
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let food of foodArray">
+          <ion-thumbnail item-start>
+            <img src="assets/img/ADOg7SDwT1eyynSFfgW6_fish.jpg">
+          </ion-thumbnail>
+          <h2>{{food.type}}</h2>
+          <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>
+        </ion-item>
+    </ion-list>
+  </ion-content>
+-->
+  <!--
+    <div [ngSwitch]="standard">
+    <ion-list *ngSwitchCase="'distance'">
+        <ion-item *ngFor="let food of foodArray">
+          <ion-thumbnail item-start>
+            <img src="assets/img/ADOg7SDwT1eyynSFfgW6_fish.jpg">
+          </ion-thumbnail>
+          <h2>{{food.type}}</h2>
+          <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>
+        </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'calories'">
+        <ion-item *ngFor="let food of foodArray">
+          <ion-thumbnail item-start>
+            <img src="assets/img/ADOg7SDwT1eyynSFfgW6_fish.jpg">
+          </ion-thumbnail>
+          <h2>{{food.type}}</h2>
+          <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>
+        </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'taste'">
+        <ion-item *ngFor="let food of foodArray">
+          <ion-thumbnail item-start>
+            <img src="assets/img/ADOg7SDwT1eyynSFfgW6_fish.jpg">
+          </ion-thumbnail>
+          <h2>{{food.type}}</h2>
+          <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>
+        </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'taste'">
+        <ion-item *ngFor="let food of foodArray">
+          <ion-thumbnail item-start>
+            <img src="assets/img/ADOg7SDwT1eyynSFfgW6_fish.jpg">
+          </ion-thumbnail>
+          <h2>{{food.type}}</h2>
+          <p style="white-space:normal;"> Taste:{{food.taste}} 🥗 | {{food.waitingTime}} min 🕐| Price:${{food.price}} | Calories:{{food.calories}}</p>
+        </ion-item>
+    </ion-list>
+
+    </div>
+  -->

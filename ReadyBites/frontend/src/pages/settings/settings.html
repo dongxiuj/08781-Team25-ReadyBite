@@ -1,0 +1,78 @@
+<ion-header>
+    <ion-navbar no-border-bottom>
+      <h1 class="title">{{user.name}}</h1>
+    </ion-navbar>
+</ion-header>
+
+    <ion-content>
+      <div>
+        <ion-item class="profile-item">
+          <div>
+              <img class = "circle-pic" [src]='user.image' (click)="openGallery()">
+            <!--<img src="{{user.image}}" ng-click="openGallery()">-->
+          </div>
+          <h2 class="profile-name dark">{{user.name}}</h2>
+          <h3>
+            Points: {{user.points}}
+          </h3>
+          <!-- <h2 class="profile-name dark">{{user.calories}}</h2>
+          <h2 class="profile-name dark">{{user.points}}</h2> -->
+
+        </ion-item>
+      </div>
+
+      <div id="chart" style="width:100%;height:250px;"></div>
+
+      <ion-list>
+        <ion-item *ngFor="let food of user.records" (tap)="showDetails(food)" text-wrap detail-none>
+          <ion-grid>
+            <ion-row>
+              <ion-col width-25>
+                <img [src]='food.image'>
+              </ion-col>
+              <ion-col width-50>
+                <h2> {{food.type}} </h2>
+                <p>
+                    <ion-icon *ngIf="food.rate>=1" name="star" item-end small></ion-icon>
+                    <ion-icon *ngIf="food.rate>=2" name="star" item-end small></ion-icon>
+                    <ion-icon *ngIf="food.rate>=3" name="star" item-end small></ion-icon>
+                    <ion-icon *ngIf="food.rate>=4" name="star" item-end small></ion-icon>
+                    <ion-icon *ngIf="food.rate>=5" name="star" item-end small></ion-icon> 
+                      <!-- Rate {{food.rate}}  -->
+                </p>
+                <p>{{food.address}}</p>
+              </ion-col>
+              <ion-col width-20 text-right>
+                <!--<p><ion-icon name="logo-usd" *ngFor="let usd of getArray(food.price)"></ion-icon></p>-->
+              </ion-col>
+            </ion-row>
+          </ion-grid>      
+        </ion-item>
+      </ion-list>
+      <!--
+      <ion-list>
+          <ion-item *ngFor="let record of records" (tap)="showDetails(record)" text-wrap detail-none>
+            <ion-grid>
+              <ion-row>
+                <ion-col width-25>
+                  <img [src]='record.image'>
+                </ion-col>
+                <ion-col>
+                  <h2> {{record.type}} </h2>
+                  <p>
+                      <ion-icon name="star" *ngFor="let star of stars; let i=index" [ngClass]="{'active': isActive(i, record)}"></ion-icon>
+                      {{record.reviewCount}} Reviews
+                  </p>
+                  <p>{{record.address}}</p>
+                  <p>{{record.waitingTime}}</p>
+                </ion-col>
+                <ion-col width-20 text-right>
+                  <p>{{record.distance}}mi.</p>
+                  <p> ${{record.distance}}</p>
+                </ion-col>
+              </ion-row>
+            </ion-grid>      
+          </ion-item>
+        </ion-list>
+      -->
+    </ion-content>

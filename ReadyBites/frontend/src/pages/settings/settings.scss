@@ -1,0 +1,78 @@
+page-settings {
+    .profile-item {
+        text-align: center;
+      }
+      
+      .profile-picture {
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        padding: 3px;
+        border-radius: 100%;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        margin: 0 auto;
+        width: 128px;
+        height: 128px;
+        overflow: hidden;
+      }
+      
+      .profile-picture img {
+        width: 128px;
+        border-radius: 100%;
+      }
+      
+      .profile-name {
+        padding-top: 20px;
+        font-size: x-large !important;
+        font-weight: bold !important;
+        text-transform: capitalize;
+      }
+
+      .record {
+    
+        background-color: #FFFFFF;
+        padding: 20px 0px;
+    
+        h3 {
+          margin-top: 0px;
+          padding-left: 15px;
+          margin-bottom: 15px;
+        }
+      }
+
+      img {
+        width: 75px;
+        height: 75px;
+        object-fit: cover;
+        border-radius: 5%;
+      }
+    
+      ion-icon[name="logo-usd"],
+      ion-icon[name="logo-euro"] {
+        font-size: 11px;
+        color: #999999;
+      }
+
+      .image {
+        height: 5vw; 
+        width: 5vw; 
+       border: 2px solid #fff;
+       border-radius: 50%;
+       box-shadow: 0 0 5px gray;
+       display: inline-block;
+       margin-left: auto;
+       margin-right: auto;
+   }
+   
+    .circle-pic{
+        width:50px;
+        height:50px;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+    .item-md [item-left], .item-md [item-right], .item-md [item-start], .item-md [item-end] {
+      margin: 0 0 0 0;
+  }
+    
+  }
+  

@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Discover
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page3">
+  <form id="discover-form3">
+    <ion-item [(ngModel)]="address" name="address">        
+      <ion-label> <ion-icon name="locate"></ion-icon></ion-label>
+      <ion-input clearInput type="text" placeholder="Current Location"></ion-input>
+    </ion-item>
+
+    <!--<ion-item id="discover-select3">
+      <ion-label>
+        ChooseImage
+      </ion-label>
+      <ion-select name="ChooseImage" [(ngModel)]="ChooseImage">
+        <ion-option>
+          Open Camera
+        </ion-option>
+        <ion-option>
+          Choose from Gallery
+        </ion-option>
+      </ion-select>
+    </ion-item> -->
+    <button id="discover-button7" ion-button outline color="royal" block (click)="openCamera()">
+      Open Camera
+    </button>
+    <button id="discover-button8" ion-button outline color="royal" block (click)="openGallery()">
+      Open Gallery
+    </button>
+    <img [src]="base64Image" [hidden]="!base64Image"/>
+    <!--<button id="discover-button8" ion-button outline color="royal" block (click)="upLoadImage()">
+      <ion-icon name="camera"></ion-icon>
+      Upload Image
+    </button>-->
+    
+    <ion-item id="discover-select7">
+      <ion-label>
+        Food Type
+      </ion-label>
+      <ion-select [(ngModel)]="type" name="type">
+        <ion-option>
+          🍔hamburger
+        </ion-option>
+        <ion-option>
+          🥗salad
+        </ion-option>
+        <ion-option>
+          🍟french fries
+        </ion-option>
+        <ion-option>
+          🍣sushi
+        </ion-option>
+        <ion-option>
+          🍲soup
+        </ion-option>
+        <ion-option>
+          🍜noodles
+        </ion-option>
+      </ion-select>
+    </ion-item>
+
+    <!--<ion-item id="discover-select6">
+      <ion-label>
+        Waiting Time
+      </ion-label>
+      <ion-select [(ngModel)]="WaitingTime" name="WaitingTime">
+        <ion-option>
+          1-5 min
+        </ion-option>
+        <ion-option>
+          6-15 min
+        </ion-option>
+        <ion-option>
+          above 15 min
+        </ion-option>
+      </ion-select>
+    </ion-item>-->
+    <ion-item [(ngModel)]="waitingTime" name="waitingTime">
+        <ion-label color="primary" floating>waitingTime(min)</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+
+      <ion-item [(ngModel)]="calories" name="calories">
+          <ion-label color="primary" floating>Calories(kcal)</ion-label>
+          <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item [(ngModel)]="price" name="price">
+          <ion-label color="primary" floating>Price($)</ion-label>
+          <ion-input></ion-input>
+      </ion-item>
+
+      
+    
+  </form>
+  <button id="discover-button8" ion-button outline color="royal" block (click)="storeFood()">
+    Finish
+  </button>
+</ion-content>

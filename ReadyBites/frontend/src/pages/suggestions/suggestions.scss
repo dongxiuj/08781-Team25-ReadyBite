@@ -1,0 +1,32 @@
+page-suggestions {
+  img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 5%;
+  }
+
+  ion-icon[name="logo-usd"],
+  ion-icon[name="logo-euro"] {
+    font-size: 11px;
+    color: #999999;
+  }
+
+  ion-icon[name="star"] {
+    margin: 0 0 0 0;
+  }
+
+  .item-md [item-left], .item-md [item-right], .item-md [item-start], .item-md [item-end] {
+    margin: 0 0 0 0;
+}
+
+
+  .search-box {
+    position: absolute;
+    top: 2%;
+    z-index: 999;
+  }
+  ion-textarea {
+    font-size: 14px;
+  }
+}
